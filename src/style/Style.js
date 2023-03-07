@@ -1,8 +1,12 @@
-import zIndex from "@mui/material/styles/zIndex";
-import { positions } from "@mui/system";
-import { Sidebar } from "react-pro-sidebar";
+import { hover } from "@testing-library/user-event/dist/hover";
+import Sidebar from "../pages/global/Sidebar";
 
 export const customStyle = {
+  boxcontainer: {
+    width: "250px",
+    padding: "10px",
+    boxShadow: "1px 1px 2px 2px gray",
+  },
   iconContainer: {
     borderRadius: 0,
     display: "block",
@@ -13,6 +17,7 @@ export const customStyle = {
     width: "100% !important",
     justifyContent: "flex-start",
   },
+
   itemText: {
     marginLeft: 2,
   },

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.dasboard-section{
+    margin-top: 90px;
+    width: 80%;
+    height: 600vh;
+    background-color: rgba(245, 248, 248, 0.541);
+    padding: 20px;
+}

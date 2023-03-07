@@ -1,6 +1,7 @@
 .container{
-    margin:auto;
+    margin-right: 10px;
     width: 80%;
+    margin-top: 140px;
     background-image: url(../../image/bg-1.jpeg) ;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,3 +18,7 @@
     width: fit-content;
     overflow: auto;
 }
+
+
+
+
