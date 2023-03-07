@@ -2,10 +2,20 @@ import { hover } from "@testing-library/user-event/dist/hover";
 import Sidebar from "../pages/global/Sidebar";
 
 export const customStyle = {
+  profileimg: {
+    width: "100px",
+    height: "100px",
+    margin: "10% auto",
+    borderRadius: 80,
+    marginbottom: "230px",
+  },
   boxcontainer: {
     width: "250px",
+    height: "100vh",
     padding: "10px",
-    boxShadow: "1px 1px 2px 2px gray",
+    boxShadow:
+      "0 2px 8px 2px rgba(0, 0, 0, 0.2), 0 0px 4px 2px rgba(0, 0, 0, 0.19)",
+    position: "fixed",
   },
   iconContainer: {
     borderRadius: 0,
@@ -16,6 +26,8 @@ export const customStyle = {
     alignItems: "center",
     width: "100% !important",
     justifyContent: "flex-start",
+    color: "white",
+    marginbottom: "40px",
   },
 
   itemText: {

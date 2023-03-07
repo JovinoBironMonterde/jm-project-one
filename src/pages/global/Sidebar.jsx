@@ -11,6 +11,8 @@ import CategoryIcon from "@mui/icons-material/Category";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LineAxisIcon from "@mui/icons-material/LineAxis";
 import { customStyle } from "../../style/Style";
+
+import "./global.css";
 // import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 // import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 // import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -22,69 +24,107 @@ import { customStyle } from "../../style/Style";
 
 function Sidebar() {
   return (
-    <Box sx={customStyle.boxcontainer}>
-      <a
-        href="/dashboard"
-        style={{
-          textDecoration: "none",
-        }}
-      >
-        <IconButton sx={customStyle.iconContainer}>
-          <DashboardIcon />
-          <Typography sx={customStyle.itemText}>Dashboard</Typography>
-        </IconButton>
-      </a>
+    <div className="coname">
+      <Box sx={customStyle.boxcontainer}>
+        <Box sx={customStyle.profileimg}>
+          <img
+            src="https://images.pexels.com/photos/6484384/pexels-photo-6484384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            style={{ borderRadius: "50%", width: "100px", height: "100px" }}
+          />
+        </Box>
+        <Box style={{ marginTop: "80px" }}>
+          <a
+            href="/dashboard"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton sx={customStyle.iconContainer}>
+              <DashboardIcon />
+              <Typography sx={customStyle.itemText}>Dashboard</Typography>
+            </IconButton>
+          </a>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <PeopleOutlinedIcon />
-        <Typography sx={customStyle.itemText}>Sales Rep</Typography>
-      </IconButton>
+          <a
+            href="/salesrep"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton sx={customStyle.iconContainer}>
+              <PeopleOutlinedIcon />
+              <Typography sx={customStyle.itemText}>Sales Rep</Typography>
+            </IconButton>
+          </a>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <CategoryIcon />
-        <Typography sx={customStyle.itemText}>Category</Typography>
-      </IconButton>
+          <a
+            href="/category"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton sx={customStyle.iconContainer}>
+              <CategoryIcon />
+              <Typography sx={customStyle.itemText}>Category</Typography>
+            </IconButton>
+          </a>
+          <a
+            href="/order"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton sx={customStyle.iconContainer}>
+              <ShoppingCartIcon />
+              <Typography sx={customStyle.itemText}>Order</Typography>
+            </IconButton>
+          </a>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <ShoppingCartIcon />
-        <Typography sx={customStyle.itemText}>Order</Typography>
-      </IconButton>
+          <a
+            href="/leads"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton sx={customStyle.iconContainer}>
+              <LineAxisIcon />
+              <Typography sx={customStyle.itemText}>Leads</Typography>
+            </IconButton>
+          </a>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <LineAxisIcon />
-        <Typography sx={customStyle.itemText}>Leads</Typography>
-      </IconButton>
+          <IconButton sx={customStyle.iconContainer}>
+            <CalendarTodayOutlinedIcon />
+            <Typography sx={customStyle.itemText}>Calendar</Typography>
+          </IconButton>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <CalendarTodayOutlinedIcon />
-        <Typography sx={customStyle.itemText}>Calendar</Typography>
-      </IconButton>
+          <IconButton sx={customStyle.iconContainer}>
+            <BarChartOutlinedIcon />
+            <Typography sx={customStyle.itemText}>Chart</Typography>
+          </IconButton>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <BarChartOutlinedIcon />
-        <Typography sx={customStyle.itemText}>Chart</Typography>
-      </IconButton>
+          <IconButton sx={customStyle.iconContainer}>
+            <ChatIcon />
+            <Typography sx={customStyle.itemText}>Chat Managment</Typography>
+          </IconButton>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <ChatIcon />
-        <Typography sx={customStyle.itemText}>Chat Managment</Typography>
-      </IconButton>
+          <IconButton sx={customStyle.iconContainer}>
+            <HelpOutlinedIcon />
+            <Typography sx={customStyle.itemText}>Help</Typography>
+          </IconButton>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <HelpOutlinedIcon />
-        <Typography sx={customStyle.itemText}>Help</Typography>
-      </IconButton>
+          <IconButton sx={customStyle.iconContainer}>
+            <SettingsIcon />
+            <Typography sx={customStyle.itemText}>Settings</Typography>
+          </IconButton>
 
-      <IconButton sx={customStyle.iconContainer}>
-        <SettingsIcon />
-        <Typography sx={customStyle.itemText}>Settings</Typography>
-      </IconButton>
-
-      <IconButton sx={customStyle.iconContainer}>
-        <LogoutIcon />
-        <Typography sx={customStyle.itemText}>Logout</Typography>
-      </IconButton>
-    </Box>
+          <IconButton sx={customStyle.iconContainer}>
+            <LogoutIcon />
+            <Typography sx={customStyle.itemText}>Logout</Typography>
+          </IconButton>
+        </Box>
+      </Box>
+    </div>
   );
 }
 

@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-.dasboard-section{
+.order-section {
     margin-top: 120px;
     margin-left: 278px;
     margin-right: 10px;
@@ -13,6 +13,5 @@
     height: 1600vh;
     /* background-color: rgba(245, 248, 248, 0.541); */
     padding: 20px;
-  
-}
 
+}
