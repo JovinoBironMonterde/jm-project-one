@@ -1,13 +1,12 @@
+import zIndex from "@mui/material/styles/zIndex";
 import { hover } from "@testing-library/user-event/dist/hover";
 import Sidebar from "../pages/global/Sidebar";
 
 export const customStyle = {
   profileimg: {
-    width: "100px",
-    height: "100px",
-    margin: "10% auto",
-    borderRadius: 80,
-    marginbottom: "230px",
+    width: "100%",
+    paddingBottom: "30px",
+    borderBottom: "1px solid gray",
   },
   boxcontainer: {
     width: "250px",
@@ -15,7 +14,9 @@ export const customStyle = {
     padding: "10px",
     boxShadow:
       "0 2px 8px 2px rgba(0, 0, 0, 0.2), 0 0px 4px 2px rgba(0, 0, 0, 0.19)",
-    position: "fixed",
+
+    background: "#fff;",
+    zIndex: "99999999",
   },
   iconContainer: {
     borderRadius: 0,
@@ -26,7 +27,7 @@ export const customStyle = {
     alignItems: "center",
     width: "100% !important",
     justifyContent: "flex-start",
-    color: "white",
+    color: "black",
     marginbottom: "40px",
   },
 

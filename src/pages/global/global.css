@@ -4,28 +4,33 @@
     box-sizing: border-box;
 }
 .topbar-section{
-    padding: 10px 0px;
-        position: fixed;
-        top: 0;
-        right: 0%;
-        width: 80%;
-        height: 12vh;
-        display: flex;
-        justify-content: space-between;
-        z-index: 999999999;
-    background-color: #20232a;
-            /* background-color: rgb(1, 21, 41); */
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 10px;
+    padding: 20px 20px;
+    margin-left: 260px !important;
+    
+    position: sticky;
+    top: 0;
+    right: 0%;
+    width: auto;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999999999;
+    background-color: var(--wsr-color-D80);
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 }
 .logo {
-    margin-left: 10%;
-    color: white;
+    left: 0;
+    color: black;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
-.logo .icon{
-    color: whitesmoke;
+
+ .icon{
+    color: var(--wsr-color-D20);
+    margin-right: 10px;
 }
 
 ul {
@@ -51,8 +56,38 @@ ul li a:hover {
     color: rgb(51, 34, 2);
 }
 
-.coname{
-    background-color: aqua;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
-
+.sidebar-section{
+    /* z-index: 9999999999; */
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0px 4px 2px rgba(0, 0, 0, 0.19);
+   height: 100vh;
+   position: fixed;
+   top: 0;
 }
+.App-logo{
+    width: 140px;
+    margin:  auto 18%;
+}
+form input{
+    width: 380px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 3px solid rgba(41, 40, 40, 0.363);
+    
+}
+form button{
+    padding: 15px;
+    margin-left: -65px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+        border: 3px solid rgba(41, 40, 40, 0.363);
+}
+form input:active{
+    border-style: none;
+    border-color: rgba(41, 40, 40, 0.363);
+}
+
+
+
+
+

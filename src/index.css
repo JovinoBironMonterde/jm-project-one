@@ -7,8 +7,103 @@
   padding: 0;
 
 }
+
+:root{
+   
+      --wsr-color-D10: #000624;
+      --wsr-color-D20: #333853;
+      --wsr-color-D30: #595d70;
+      --wsr-color-D40: #868aa5;
+      --wsr-color-D50: #acafc4;
+      --wsr-color-D55: #cfd1dc;
+      --wsr-color-D60: #dfe5eb;
+      --wsr-color-D70: #eceff3;
+      --wsr-color-D80: #fff;
+      --wsr-color-B00: #084ebd;
+      --wsr-color-B05: #0f62e6;
+      --wsr-color-B10: #116dff;
+      --wsr-color-B20: #5999ff;
+      --wsr-color-B30: #a8caff;
+      --wsr-color-B40: #d6e6fe;
+      --wsr-color-B50: #e7f0ff;
+      --wsr-color-B60: #f4f7ff;
+      --wsr-color-R00: #b81206;
+      --wsr-color-R05: #d0180b;
+      --wsr-color-R10: #e62214;
+      --wsr-color-R20: #ff6d63;
+      --wsr-color-R30: #f69891;
+      --wsr-color-R40: #fbd0cd;
+      --wsr-color-R50: #fde3e1;
+      --wsr-color-R60: #fdeceb;
+      --wsr-color-P00: #7416a5;
+      --wsr-color-P05: #8e1dd1;
+      --wsr-color-P10: #9a27d5;
+      --wsr-color-P20: #c161f0;
+      --wsr-color-P30: #cf8cf1;
+      --wsr-color-P40: #e3c3f4;
+      --wsr-color-P50: #f1e0f9;
+      --wsr-color-P60: #f7edfc;
+      --wsr-color-G00: #1d8649;
+      --wsr-color-G05: #229954;
+      --wsr-color-G10: #25a55a;
+      --wsr-color-G20: #51b77b;
+      --wsr-color-G30: #87cea5;
+      --wsr-color-G40: #c8e8d6;
+      --wsr-color-G50: #e1f4eb;
+      --wsr-color-G60: #e9f6ee;
+      --wsr-color-Y00: #d59900;
+      --wsr-color-Y05: #e7a600;
+      --wsr-color-Y10: #ffb700;
+      --wsr-color-Y20: #ffc23d;
+      --wsr-color-Y30: #ffd16e;
+      --wsr-color-Y40: #ffe2a5;
+      --wsr-color-Y50: #fff0d1;
+      --wsr-color-Y60: #fff6e5;
+      --wsr-color-O00: #df4d00;
+   
+    }
+  
+    /* .sYUTbOm {
+      --typography64122784-wsr-font-family: Madefor, "Helvetica Neue", Helvetica, Arial, "\30E1\30A4\30EA\30AA", "meiryo", "\30D2\30E9\30AE\30CE\89D2\30B4 pro w3", "hiragino kaku gothic pro", sans-serif;
+      --typography64122784-wsr-font-weight-regular: 400;
+      --typography64122784-wsr-font-weight-medium: 530;
+      --typography64122784-wsr-font-weight-bold: 700;
+      --typography64122784-wsr-text-font-size-tiny: 12px;
+      --typography64122784-wsr-text-font-size-small: 14px;
+      --typography64122784-wsr-text-font-size-medium: 16px;
+      --typography64122784-wsr-text-line-height-tiny: 15px;
+      --typography64122784-wsr-text-line-height-small: 18px;
+      --typography64122784-wsr-text-line-height-medium: 24px;
+      --typography64122784-wsr-heading-font-size-h1: 32px;
+      --typography64122784-wsr-heading-font-size-h2: 24px;
+      --typography64122784-wsr-heading-font-size-h3: 20px;
+      --typography64122784-wsr-heading-font-size-h4: 18px;
+      --typography64122784-wsr-heading-font-size-h5: 12px;
+      --typography64122784-wsr-heading-font-size-h6: 10px;
+      --typography64122784-wsr-heading-font-size-xl: 28px;
+      --typography64122784-wsr-heading-font-size-l: 21px;
+      --typography64122784-wsr-heading-font-size-m: 18px;
+      --typography64122784-wsr-heading-font-size-s: 18px;
+      /* --typography64122784-wsr-heading-font-size-t: 15px;
+      --typography64122784-wsr-heading-font-size-xt: 12px;
+      --typography64122784-wsr-heading-line-height-h1: 42px;
+      --typography64122784-wsr-heading-line-height-h2: 30px;
+      --typography64122784-wsr-heading-line-height-h3: 24px;
+      --typography64122784-wsr-heading-line-height-h4: 24px;
+      --typography64122784-wsr-heading-line-height-h5: 24px;
+      --typography64122784-wsr-heading-line-height-h6: 18px;
+      --typography64122784-wsr-heading-line-height-xl: 36px;
+      --typography64122784-wsr-heading-line-height-l: 28px;
+      --typography64122784-wsr-heading-line-height-m: 24px;
+      --typography64122784-wsr-heading-line-height-s: 24px;
+      --typography64122784-wsr-heading-line-height-t: 24px;
+      --typography64122784-wsr-heading-line-height-xt: 15px;
+      --typography64122784-wsr-caption-font-size-1: 10px;
+      --typography64122784-wsr-caption-line-height-1: 12px;
+    
+} */
 body{
-  background-color: #20232a;
+  background-color: var(--wsr-color-D80);
 }
 .container{
   padding: 10px 0px;
@@ -20,8 +115,8 @@ body{
   display: flex;
   justify-content: space-between;
   z-index: 999999999;
-  background-color: #20232a;
-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--wsr-color-D50);
+/* box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 10px;
 
 }

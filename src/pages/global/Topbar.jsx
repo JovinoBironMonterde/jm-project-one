@@ -8,22 +8,27 @@ function Topbar() {
   return (
     <section className="topbar-section">
       <div className="logo">
-        <div className="icon">
-          <AccountCircleIcon />
-        </div>
-        <h1>MyLogo</h1>
+        <form>
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+          {/* <label>
+            <input type="checkbox" /> Only show products in stock
+          </label> */}
+        </form>
       </div>
-      <ul>
+
+      <ul style={{ margin: "0" }}>
         {/* <li>
           <a href="/home">Home</a>
         </li>
         <li>
           <a href="/about">About</a>
         </li> */}
+        <div className="icon">
+          <AccountCircleIcon />
+        </div>
 
-        <li>
-          <InfoIcon />
-        </li>
+        <InfoIcon />
       </ul>
     </section>
   );

@@ -16,6 +16,7 @@ function App() {
 
   switch (window.location.pathname) {
     case "/dashboard":
+    default:
       componet = <Dashboard />;
       break;
 
