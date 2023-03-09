@@ -12,7 +12,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LineAxisIcon from "@mui/icons-material/LineAxis";
 import { customStyle } from "../../style/Style";
 import logo from "../../image/logo.png";
-
+import "../../App.css";
 import "./global.css";
 // import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 // import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -25,7 +25,7 @@ import "./global.css";
 
 function Sidebar() {
   return (
-    <section className="sidebar-section">
+    <section className="sidebar-section global-card">
       <div className="coname">
         <Box sx={customStyle.boxcontainer}>
           <Box sx={customStyle.profileimg}>

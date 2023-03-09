@@ -15,7 +15,7 @@ export const customStyle = {
     boxShadow:
       "0 2px 8px 2px rgba(0, 0, 0, 0.2), 0 0px 4px 2px rgba(0, 0, 0, 0.19)",
 
-    background: "#fff;",
+    background: "#1e1e1e;",
     zIndex: "99999999",
   },
   iconContainer: {
@@ -27,7 +27,7 @@ export const customStyle = {
     alignItems: "center",
     width: "100% !important",
     justifyContent: "flex-start",
-    color: "black",
+    color: "lightgray",
     marginbottom: "40px",
   },
 

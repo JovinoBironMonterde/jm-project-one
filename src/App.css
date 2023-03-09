@@ -1,0 +1,9 @@
+.global-card {
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    color: white;
+}
+
+.page-bg-dark {
+    background-color: var(--wsr-color-D10);
+}
