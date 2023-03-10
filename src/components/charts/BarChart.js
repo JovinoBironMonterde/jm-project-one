@@ -1,14 +1,27 @@
+import { style } from "@mui/system";
 import React from "react";
-import { PieChart, Tooltip } from "recharts";
+import {
+  BarChart,
+  Bar,
+  Tooltip,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Legend,
+} from "recharts";
 
 const PieCharts = () => {
   const data = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-    { name: "Group C", value: 300 },
-    { name: "Group D", value: 200 },
-    { name: "Group E", value: 278 },
-    { name: "Group F", value: 189 },
+    { name: "Jan", value: 400 },
+    { name: "Feb", value: 300 },
+    { name: "Mar", value: 300 },
+    { name: "Apr", value: 200 },
+    { name: "May", value: 278 },
+    { name: "Jun", value: 189 },
+    { name: "Jul", value: 189 },
+    { name: "Aug", value: 189 },
+    { name: "Sep", value: 189 },
+    { name: "Oct", value: 189 },
   ];
 
   const data02 = [
@@ -21,15 +34,29 @@ const PieCharts = () => {
   ];
   return (
     <div>
-      <PieChart width={400} height={400}>
+      <BarChart
+        width={950}
+        height={400}
+        data={data}
+        margin={{
+          top: 20,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+        barSize={50}
+      >
+        <XAxis dataKey="name" scale="point" padding={{ left: 30, right: 30 }} />
+        <YAxis />
         <Tooltip />
-      </PieChart>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="value" fill="#8884d8" />
+        <Legend />
+        <CartesianGrid strokeDasharray="1 1" />
+        <Bar
+          dataKey="value"
+          fill="#8884d8"
+          background={{ fill: "transparent" }}
+        />
+      </BarChart>
     </div>
   );
 };

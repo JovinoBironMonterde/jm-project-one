@@ -115,6 +115,14 @@ color: darkslategrey;
     padding: 20px;
     margin-left: 10px;
 }
+
+.bar-chart{
+    padding: 30px 20px;
+    margin: 10px 0;
+}
+
+
+
 .div-chart-box{
 box-shadow: 5px 5px 5px 2px rgba(15, 15, 15, 0.2), 0 0px 0px 0px rgba(88, 84, 84, 0.19);
 }

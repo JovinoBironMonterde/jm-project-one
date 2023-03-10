@@ -87,7 +87,7 @@ function Dashboard() {
         <div className="container2">
           <div className="div-chart-container">
             <h1> Income Overview</h1>
-            <div className="bar-chart">
+            <div className="bar-chart global-card">
               <BarChart />
             </div>
             <div className="div-chart-box global-card">
