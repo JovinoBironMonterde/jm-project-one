@@ -4,14 +4,19 @@ import "../App.css";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import SellIcon from "@mui/icons-material/Sell";
 import CategoryIcon from "@mui/icons-material/Category";
-import charts from "./charts";
-import BarChart from "./Barchart";
+import BarChart from "./charts/BarChart";
+import { CategoryScale } from "chart.js";
+import Chart from "chart.js/auto";
+import PieCharts from "./charts/PieCharts";
 
 // import { Chart } from "chart.js";
 
 // import { Chart } from "chart.js/dist";
+Chart.register(CategoryScale);
 
 function Dashboard() {
+  // const [chartData, setChartData] = useState({});
+
   return (
     <section className="dasboard-section ">
       <h1>Dashboard</h1>
@@ -20,7 +25,7 @@ function Dashboard() {
         <div className="div-card">
           <div className="box global-card">
             <div className="div-top">
-              <span>Total of Orders</span>
+              <span className="box-title">Total of Orders</span>
               <span className="icon">
                 <SellIcon />
               </span>
@@ -35,7 +40,7 @@ function Dashboard() {
 
           <div className="box global-card">
             <div className="div-top">
-              <span>Total of Product</span>
+              <span className="box-title">Total of Product</span>
               <span className="icon">
                 <CategoryIcon />
               </span>
@@ -50,7 +55,7 @@ function Dashboard() {
 
           <div className="box global-card">
             <div className="div-top">
-              <span>Total of Orders</span>
+              <span className="box-title">Total of Orders</span>
               <span className="icon">
                 <SellIcon />
               </span>
@@ -65,7 +70,7 @@ function Dashboard() {
 
           <div className="box global-card">
             <div className="div-top">
-              <span>Total of Orders</span>
+              <span className="box-title">Total of Orders</span>
               <span className="icon">
                 <SellIcon />
               </span>
@@ -82,8 +87,12 @@ function Dashboard() {
         <div className="container2">
           <div className="div-chart-container">
             <h1> Income Overview</h1>
-            <div className="div-chart-box global-card">
+            <div className="bar-chart">
               <BarChart />
+            </div>
+            <div className="div-chart-box global-card">
+              {/* <BarChart chartData={chartData} /> */}
+              <PieCharts />
             </div>
           </div>
 

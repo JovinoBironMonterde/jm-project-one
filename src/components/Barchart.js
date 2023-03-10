@@ -1,130 +1,87 @@
-import { colors, useTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
-import { ResponsiveBar } from "@nivo/bar";
+import React, { PureComponent } from "react";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
-const BarChart = ({ isDashboard = false }) => {
-  return (
-    (colors = "red"),
-    (
-      <ResponsiveBar
-        theme={{
-          // added
-          axis: {
-            domain: {
-              line: {
-                stroke: colors,
-              },
-            },
-            legend: {
-              text: {
-                fill: colors,
-              },
-            },
-            ticks: {
-              line: {
-                stroke: colors,
-                strokeWidth: 1,
-              },
-              text: {
-                fill: colors,
-              },
-            },
-          },
-          legends: {
-            text: {
-              fill: colors,
-            },
-          },
-        }}
-        keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-        indexBy="country"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        valueScale={{ type: "linear" }}
-        indexScale={{ type: "band", round: true }}
-        colors={{ scheme: "nivo" }}
-        defs={[
-          {
-            id: "dots",
-            type: "patternDots",
-            background: "inherit",
-            color: "#38bcb2",
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "#eed312",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        borderColor={{
-          from: "color",
-          modifiers: [["darker", "1.6"]],
-        }}
-        axisTop={null}
-        axisRight={null}
-        axisBottom={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: isDashboard ? undefined : "country", // changed
-          legendPosition: "middle",
-          legendOffset: 32,
-        }}
-        axisLeft={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: isDashboard ? undefined : "food", // changed
-          legendPosition: "middle",
-          legendOffset: -40,
-        }}
-        enableLabel={false}
-        labelSkipWidth={12}
-        labelSkipHeight={12}
-        labelTextColor={{
-          from: "color",
-          modifiers: [["darker", 1.6]],
-        }}
-        legends={[
-          {
-            dataFrom: "keys",
-            anchor: "bottom-right",
-            direction: "column",
-            justify: false,
-            translateX: 120,
-            translateY: 0,
-            itemsSpacing: 2,
-            itemWidth: 100,
-            itemHeight: 20,
-            itemDirection: "left-to-right",
-            itemOpacity: 0.85,
-            symbolSize: 20,
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
-        role="application"
-        barAriaLabel={function (e) {
-          return (
-            e.id + ": " + e.formattedValue + " in country: " + e.indexValue
-          );
-        }}
-      />
-    )
-  );
-};
+const data = [
+  {
+    name: "Page A",
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: "Page B",
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: "Page C",
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Page D",
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: "Page E",
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: "Page F",
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Page G",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+];
 
-export default BarChart;
+export default class Example extends PureComponent {
+  static demoUrl = "https://codesandbox.io/s/stacked-bar-chart-s47i2";
+
+  render() {
+    return (
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+          <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+        </BarChart>
+      </ResponsiveContainer>
+    );
+  }
+}
