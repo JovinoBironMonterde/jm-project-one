@@ -22,6 +22,16 @@ const PieCharts = () => {
   return (
     <div>
       <PieChart width={400} height={400}>
+        <PieChart width={400} height={400}>
+          <Tooltip />
+        </PieChart>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="value" fill="#8884d8" />
+
         <Pie
           dataKey="value"
           isAnimationActive={false}

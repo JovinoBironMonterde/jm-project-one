@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Tooltip } from "recharts";
+import { PieChart, Tooltip } from "recharts";
 
 const PieCharts = () => {
   const data = [
@@ -22,16 +22,6 @@ const PieCharts = () => {
   return (
     <div>
       <PieChart width={400} height={400}>
-        <Pie
-          dataKey="value"
-          isAnimationActive={false}
-          data={data}
-          cx="50%"
-          cy="50%"
-          outerRadius={80}
-          fill="#8884d8"
-          label
-        />
         <Tooltip />
       </PieChart>
       <CartesianGrid strokeDasharray="3 3" />
@@ -40,7 +30,6 @@ const PieCharts = () => {
       <Tooltip />
       <Legend />
       <Bar dataKey="value" fill="#8884d8" />
-      <Bar dataKey="uv" fill="#82ca9d" />
     </div>
   );
 };
